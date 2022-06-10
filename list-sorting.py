@@ -12,21 +12,10 @@ class Draw:
     def set_list(self, x):
         self.list = x
 
-def main():
-    run = True
-    clock = pygame.time.Clock()
+def animationLoop():
+    loop = True
+    while loop:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT():
+                
     
-    a_list = [1,2,3,4,5,6]
-    draw_info = Draw(800, 600, a_list)
-    
-    while run: 
-        clock.tick(60)
-        pygame.display.update()
-        
-        for i in pygame.event.get():
-            if i == pygame.QUIT:
-                run = False 
-    pygame.quit()
-
-if __name__ == "__main__":
-    main()
