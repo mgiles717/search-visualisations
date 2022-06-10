@@ -1,3 +1,11 @@
+## Graph traversal visualisation
+import pygame
+
+class Draw:
+    """ In this class implement methods to draw the graphs"""
+    def __init__(self, width, height):
+        pass
+
 class Node:
     def __init__(self, value, leaves=[]):
         self.value = value
@@ -46,6 +54,8 @@ class Graph:
         return visited
     
 if __name__ == "__main__":
+    pygame.init()
+    
     A = Node(value='A', leaves=['B','C'])
     B = Node(value='B', leaves=['D', 'E'])
     C = Node(value='C', leaves=['F'])
@@ -53,6 +63,8 @@ if __name__ == "__main__":
     E = Node(value='E')
     F = Node(value='F')
     
-    a_graph = Graph([A,B,C,D,E,F])
+    #a_graph = Graph([A,B,C,D,E,F])
     #print(a_graph.get_node_from_str('B'))
-    a_graph.bfs()
+    #a_graph.bfs()
+    
+    
